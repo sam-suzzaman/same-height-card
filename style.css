@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 5rem 2rem;
+    background-color: #f0fdff;
+
+    /* ==========key line=============== */
+    align-items: center;
+}
+.col {
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    /* ==========key line=============== */
+    /* 
+    if we need to use>>>> align-items:center 
+    then we need to use>>> align-self:normal 
+    
+    else if we don't using>> align-items:center 
+    then we don't need to use>> align-self:normal  
+    */
+    /* ==========key line=============== */
+    align-self: normal;
+}
+
+@media (max-width: 700px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
